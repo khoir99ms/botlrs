@@ -1,0 +1,51 @@
+// Mixin for botlrs
+
+@mixin box-sizing($box-model){
+	box-sizing: $box-model;
+}
+
+@mixin container-base(){
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: ($gutter-base / 2);
+	padding-right: ($gutter-base /  2);
+}
+
+@mixin border-radius($radius: 5px){
+	-moz-border-radius: $radius; 
+	-webkit-border-radius: $radius; 
+	border-radius: $radius; 
+}
+
+@mixin caret-mark($direction){
+	//arrow top
+	@if $direction == top {
+	  border-top: 0;
+	  border-bottom: 4px solid;
+	  border-right: 4px solid transparent;
+	  border-left: 4px solid transparent;
+	}
+
+	//arrow bottom
+	@if $direction == bottom {
+	  border-top:   4px solid;
+	  border-right: 4px solid transparent;
+	  border-left:  4px solid transparent;
+	}
+	
+	//arrow left
+	@if $direction == left {
+	  border-left: 0;
+	  border-right: 4px solid;
+	  border-top: 4px solid transparent;
+	  border-bottom: 4px solid transparent;
+	}
+
+	//arrow right
+	@if $direction == right {
+	  border-right: 0;
+	  border-left: 4px solid;
+	  border-top: 4px solid transparent;
+	  border-bottom: 4px solid transparent;
+	}
+}

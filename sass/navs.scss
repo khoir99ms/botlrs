@@ -1,0 +1,172 @@
+/**
+* Nav for botlrs
+*
+* -------------------------------------------
+*/
+
+// nav menu
+.nav{
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	> li{
+		display: inline-block;
+		position: relative;
+		min-width: auto;
+		&:hover{
+			background-color: $navbar-bg-hover-color;
+			> a {
+				color: $navbar-font-hover-color;
+			}
+		}
+		a{	
+			padding: $navbar-padding-base;
+			line-height: $navbar-line-height;
+			position: relative;
+			display: inline-block;
+		}
+		> ul{
+			border-top: solid $navbar-border-size $navbar-border-color;
+			box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.20);
+		}
+		// arrow down
+		.caret-mark{
+			@include caret-mark(bottom);
+		}
+	}
+	li:hover{
+		-webkit-transition: all ease .8s;
+		-o-transition: all ease .8s;
+		-moz-transition: all ease .8s;
+		-ms-transition: all ease .8s;
+		transition: all ease .8s;
+	}
+	li:hover > ul{
+		display: block;
+		visibility: visible;
+	}
+	ul{
+		display: none;
+		position: absolute;
+		background-color: $white;
+		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.20);
+		background-clip: padding;
+		top: 100%;
+		left: 0;
+		li:hover > ul{
+			display: inline-block;
+		}
+		ul{
+			left: 100%;
+			top: auto;
+		}
+		&:hover{
+			-webkit-transition: all ease .9s;
+			-o-transition: all ease .9s;
+			-moz-transition: all ease .9s;
+			-ms-transition: all ease .9s;
+			transition: all ease .9s;	
+		}
+
+		li {
+			display: block;
+			position: relative;
+			a{
+				font-size: to_em(12.99px, $font-size-base);
+				display: inline-block;
+				padding: ($navbar-padding-base / 2) $navbar-padding-base;
+				min-width: 150px !important;
+				max-width: 240px !important;
+				word-wrap: break-word;
+			}
+			&:hover{
+				background-color: lighten($silver, 16%);
+			}
+			// arrow right
+			.caret-mark{
+				@include caret-mark(right);
+			}
+		}
+	}
+	&.nav-right{
+		float: right;
+		ul{
+			top: 100%;
+			right: 0;
+			left: auto;
+			ul{
+				right: 100%;
+				top: auto;
+			}
+		}
+	}
+}
+
+// mediaqueries
+// phone display
+@media screen and (max-width : $screen-sm){
+	.nav{
+		display: block !important;
+		position: relative;
+		> li{
+			display: block !important;
+			width: 100%;
+
+			> ul{
+				border-top: none;
+				box-shadow: none;
+			}
+		}
+
+		ul{
+			position: relative;
+			background: $white;
+			box-shadow: none;
+			border: none;
+			li:hover > ul{
+				display: block;
+			}
+			ul{
+				left: 0%;
+				top: 0%;
+			}
+			li{
+				width: 100% !important;
+				display: block;
+				padding: 0;
+			}
+
+			a{
+				padding: 8px;
+			}
+		}
+
+		&.nav-right{
+			float: none;
+			ul{
+				top: 0%;
+				right: 0;
+				ul{
+					right: 0%;
+					top: auto;
+				}
+			}
+		}
+		.caret-mark{
+			display: none;
+		}
+	}
+}
+/* // tablet display
+@media only screen and (min-width : $screen-sm){
+	width: $container-sm;
+}
+// com or latop medium display
+@media only screen and (min-width : $screen-md){
+	width: $container-md;
+}
+// com or latop large display
+@media only screen and (min-width : $screen-lg){
+	width: $container-lg;
+}
+ */

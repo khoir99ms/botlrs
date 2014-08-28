@@ -1,0 +1,35 @@
+/**
+* Utilities for botlrs
+*
+* -------------------------------------------
+*/
+
+// Utilities for botlrs
+.clearfix{
+	&:after,
+	&:before{
+		content: " ";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+// floating element
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+// caret mark
+.caret-mark {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  vertical-align: middle;
+}

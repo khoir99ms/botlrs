@@ -1,0 +1,14 @@
+/**
+* Navbar, nav and taskbar for botlrs
+*
+* -------------------------------------------
+*/
+
+// navbar menu
+
+.navbar{
+	min-height: $navbar-height;
+	background-clip: content-box;
+	border-color: $navbar-border-color !important;
+	border-bottom: $navbar-border-size solid;
+}

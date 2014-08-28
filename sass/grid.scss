@@ -1,0 +1,46 @@
+/**
+* Grid system
+*
+* -------------------------------------------
+*/
+.container{
+	@include container-base();
+  // phone display
+  @media only screen and (min-width : $screen-xs){
+    width: $container-xs;
+  }
+  // tablet display
+  @media only screen and (min-width : $screen-sm){
+    width: $container-sm;
+  }
+  // com or latop medium display
+  @media only screen and (min-width : $screen-md){
+    width: $container-md;
+  }
+  // com or latop large display
+  @media only screen and (min-width : $screen-lg){
+    width: $container-lg;
+  }
+}
+
+.doc{ 
+  width: 100%;
+  &-nav{
+    background: $back-doc-nav;
+  }
+
+  &-header{
+    padding : (($gutter-base * 2) / 2);
+    background: $back-doc-header;
+  }
+
+  &-body{
+    padding : (($gutter-base * 2) / 2);
+    background: $back-doc-body;
+  }
+
+  &-footer{
+    padding : (($gutter-base * 2) / 2);
+    background: $back-doc-footer;
+  }
+}

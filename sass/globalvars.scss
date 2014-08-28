@@ -1,0 +1,126 @@
+// Variables for botlrs 
+
+// ## colors swatches
+$white: 		#fff;
+$gray: 			#333;
+$gray-light: 	#999;
+$black:			#000;
+$black-light:	#434a54;
+
+$turquoise:	#1abc9c;
+$emerald:	#2ecc71;
+$peter-river:	#3498db;
+$amethyst:	#9b59b6;
+$wet-asphalt:	#34495e;
+
+$green-sea:	#16a085;
+$nephritis:	#27ae60;
+$belize-hole: #2980b9;
+$wisteria: #8e44ad;
+$midnight-blue: #2c3e50;
+
+$sun-flower: #f1c40f;
+$carrot: #e67e22;
+$alizarin: #e74c3c;
+$clouds: #ecf0f1;
+$concrete: #95a5a6;
+
+$orange : #f39c12;
+$pumpkin : #d35400;
+$pomegranate: #c0392b;
+$silver: #bdc3c7;
+$asbestos: #7f8c8d;
+
+
+// = `<body>` background and textual color
+$body-bg		: $white; 
+$body-font-color: $gray; 
+$link-color: $peter-river; 
+// ##
+
+
+// ## font properties
+$font-family-sans: 		  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans;
+$font-weight:             300;
+$font-size-base:          14.4px;
+$font-size-def:			  to_em(13.5px, $font-size-base);
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+// ##
+
+
+// ## document properties
+$back-doc-nav : $white;
+$back-doc-header : $amethyst;
+$back-doc-body : $white;
+$back-doc-footer : $wet-asphalt;
+// ##
+
+
+// ## alerts background, border and textual color
+// = success
+$alert-success-bg:		#b9df90;
+$alert-success-border:	#a0d468;
+$alert-success-color:	#3c763d;
+
+// = info
+$alert-info-bg:		#7cd1ef;
+$alert-info-border:	#4fc1e9;
+$alert-info-color:	#31708f;
+
+// = warning
+$alert-warning-bg:	#ffdd87;
+$alert-warning-border:	#ffce54;
+$alert-warning-color:	#8a6d3b;
+
+// = danger
+$alert-danger-bg:	#f2838f;
+$alert-danger-border:	#ed5565;
+$alert-danger-color:	#a94442;
+// ##
+
+
+// ## bar background, border and textual color
+// = bar properties (Navbar, Nav, Taskbar)
+$navbar-bg : $white;
+$navbar-height : 50px;
+$navbar-padding-base : 15px;
+$navbar-border-size : 3px;
+$navbar-border-color : $link-color;
+$navbar-bg-hover-color : $link-color;
+$navbar-font-hover-color : $white;
+$navbar-line-height : 20px;
+// ##
+
+
+// ## padding, margin
+$gutter-base : 30px;
+// ##
+
+
+// ## Media Queries setup
+// = phone display
+$screen-xs : 420px;
+// = tablet display
+$screen-sm : 768px;
+// = com or laptop medium display
+$screen-md : 992px;
+// = com or laptop large display
+$screen-lg : 1224px;
+// ##
+
+
+// ## Container size
+// = phone display
+$container-xs : ($screen-xs - $gutter-base);
+// = tablet display
+$container-sm : ($screen-sm - $gutter-base);
+// = com or laptop medium display
+$container-md : ($screen-md - $gutter-base);
+// = com or laptop large display
+$container-lg : ($screen-lg - $gutter-base);
+// ##

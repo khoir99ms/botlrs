@@ -1,0 +1,30 @@
+/**
+* Scaffolding for botlrs
+*
+* -------------------------------------------
+*/
+
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+html{
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+}
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-def;
+  font-weight: $font-weight;
+  font-style: normal;
+  background: $body-bg;
+  color: lighten($body-font-color, 15%);
+  line-height: 1;
+}
+a {
+  color: $link-color;
+}
